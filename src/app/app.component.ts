@@ -7,10 +7,10 @@ import { FormControl, FormGroup } from "@angular/forms";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  public myForm: FormGroup;
+  public form: FormGroup;
 
   ngOnInit() {
-    this.myForm = new FormGroup({
+    this.form = new FormGroup({
       nom: new FormControl(""),
       email: new FormControl(""),
       password: new FormControl("")
@@ -18,6 +18,6 @@ export class AppComponent {
   }
 
   submit() {
-    console.log(this.myForm);
+    console.log(this.form);
   }
 }
