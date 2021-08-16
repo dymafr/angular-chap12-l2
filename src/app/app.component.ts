@@ -1,21 +1,17 @@
-import { Component } from "@angular/core";
-import { FormControl, FormGroup } from "@angular/forms";
+import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public form: FormGroup;
-
-  ngOnInit() {
-    this.form = new FormGroup({
-      nom: new FormControl(""),
-      email: new FormControl(""),
-      password: new FormControl("")
-    });
-  }
+  public form: FormGroup = new FormGroup({
+    nom: new FormControl(''),
+    email: new FormControl(''),
+    password: new FormControl('')
+  });
 
   submit() {
     console.log(this.form);
